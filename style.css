@@ -430,35 +430,6 @@ img {
   width: 24px;
 }
 
-/* Skills Section */
-
-.skill-category {
-  background: rgb(255, 255, 255);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: var(--transition), opacity 0.8s ease, transform 0.8s ease;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-
-.skill-category.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.skill-level {
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  width: 0;
-  transition: width 1s ease-out;
-}
-
-.skill-category.visible .skill-level {
-  width: inherit; 
-}
 
 /* ===== PROJECTS SECTION ===== */
 .project-grid {
