@@ -141,25 +141,28 @@ a:hover {
   overflow: hidden;
 }
 .about-content {
-  flex-direction: row;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
-}
-.about-content p {
-  max-width: 500px;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about img {
+.about-content img {
   width: 300px;
-  border-radius: 15px;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  height: auto;
+  border-radius: 1rem;
 }
-.about img:hover {
-  transform: scale(1.05);
+
+.about-content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
 }
+
 
 
 /* Projects Section */
