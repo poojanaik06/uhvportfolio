@@ -135,9 +135,9 @@ a:hover {
 
 /* About Section */
 .about {
-  padding: 4rem 2rem;
-  background: #fff;
-  text-align: center; /* Center alignment */
+ display: grid;
+ grid-template-columns: 1fr auto; 
+ align-items: center;
 }
 .about-content {
   display: flex;
