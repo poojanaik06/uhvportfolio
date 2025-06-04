@@ -57,10 +57,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 999;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-.navbar:hover {
-  transform: translateY(-5px);
+  transition: background 0.3s ease;
 }
 .nav-links {
   list-style: none;
@@ -97,8 +94,6 @@ a:hover {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
 }
 .hero h1 {
   font-size: 3rem;
@@ -125,22 +120,17 @@ a:hover {
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
-  transition: all 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background-color: #0077ff;
   transform: scale(1.1);
-}
-.btn-glow {
-  box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
 }
 
 /* About Section */
 .about {
   padding: 4rem 2rem;
   background: #fff;
-  position: relative;
-  overflow: hidden;
 }
 .about-content {
   display: flex;
@@ -177,7 +167,7 @@ a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 .project-card img {
