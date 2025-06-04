@@ -1,8 +1,7 @@
-```
 // === Preloader ===
 window.addEventListener('load', () => {
   const preloader = document.querySelector('.preloader');
-  preloader.style.display = 'none';
+  preloader.style.display = 'none'; // Hide the preloader after the page is fully loaded
 });
 
 // === Hamburger Menu Toggle ===
@@ -51,5 +50,13 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const formData = new FormData(contact
-```
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+
+        // Simulate backend submission
+        console.log('Form Submitted:', data);
+        alert('Thank you for your message! I will get back to you soon.');
+
+        contactForm.reset();
+    });
+}
