@@ -154,6 +154,7 @@ a:hover {
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: block;
 }
 .about img:hover {
   transform: scale(1.1);
@@ -253,6 +254,116 @@ footer {
   opacity: 0;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .about img {
+    width: 250px;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about img {
+    width: 80%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .section-block,
+  .about,
+  .projects,
+  .contact {
+    padding: 2rem 1rem;
+  }
+}
+
+
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -266,7 +377,6 @@ footer {
   }
 }
 
-/* New Transition Effects */
 .image-anime {
   animation: fadeIn 1s ease forwards;
   opacity: 0;
