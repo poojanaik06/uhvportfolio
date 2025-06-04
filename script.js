@@ -34,7 +34,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', () => {
       const toggleButton = document.getElementById('uhv-toggle');
-      const content = document.getElementById('uhv-content');
+      const content = document.getElementById('uhv-paragraph');
 
       if (toggleButton && content) {
         toggleButton.addEventListener('click', () => {
