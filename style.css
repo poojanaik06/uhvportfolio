@@ -430,7 +430,16 @@ img {
   width: 24px;
 }
 
-
+.skill-category {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: var(--transition), opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  color: #f1f5f9; /* lighter text */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 /* ===== PROJECTS SECTION ===== */
 .project-grid {
   display: grid;
