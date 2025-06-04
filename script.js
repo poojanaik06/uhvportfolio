@@ -32,17 +32,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// === UHV Toggle Section ===
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('uhv-toggle');
-    const content = document.getElementById('uhv-content');
+      const toggleButton = document.getElementById('uhv-toggle');
+      const content = document.getElementById('uhv-content');
 
-    if (toggleButton && content) {
+      if (toggleButton && content) {
         toggleButton.addEventListener('click', () => {
-            content.classList.toggle('show');
+          content.classList.toggle('show');
+          
+          // Change button text based on visibility
+          if (content.classList.contains('show')) {
+            toggleButton.textContent = 'Hide Content';
+          } else {
+            toggleButton.textContent = 'Basis for Humanistic Education';
+          }
         });
-    }
-});
+      }
+    });
 
 // === Contact Form Submission ===
 const contactForm = document.getElementById('contact-form');
