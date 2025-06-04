@@ -1,3 +1,11 @@
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  setTimeout(() => {
+    preloader.style.opacity = '0';
+    preloader.style.visibility = 'hidden';
+  }, 1000);
+});
 
 // Mobile Navigation
 const hamburger = document.querySelector('.hamburger');
