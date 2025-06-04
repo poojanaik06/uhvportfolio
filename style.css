@@ -1,144 +1,89 @@
-/* General Transition Setup */
-* {
-    transition: all 0.3s ease-in-out;
+/* ==== Neon Glow on Hero Text ==== */
+.hero-content h1, 
+.hero-content h2 {
+    text-shadow: 0 0 5px #00c4b4, 0 0 10px #00c4b4, 0 0 20px #007bff;
+    animation: pulseGlow 2s infinite alternate;
 }
 
-/* Navigation Links Hover Underline */
-.nav-links a {
-    position: relative;
-    padding-bottom: 5px;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: #007bff;
-    transition: width 0.3s ease-in-out;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Hero Section Fade In */
-.hero-content {
-    animation: fadeIn 1s ease-in-out forwards;
-    opacity: 0;
-}
-
-@keyframes fadeIn {
+@keyframes pulseGlow {
+    from {
+        text-shadow: 0 0 5px #00c4b4, 0 0 10px #00c4b4;
+    }
     to {
-        opacity: 1;
+        text-shadow: 0 0 10px #007bff, 0 0 20px #00c4b4;
     }
 }
 
-/* Hero Button Effect */
-.btn {
-    position: relative;
+/* ==== Floating Image on Scroll ==== */
+.about-content img,
+.project-card img {
+    will-change: transform;
+    animation: floatImg 6s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ==== Wavy Underline on Nav Hover ==== */
+.nav-links a {
     overflow: hidden;
-    z-index: 1;
 }
 
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, #007bff, #00c4b4);
-    transition: all 0.5s ease-in-out;
-    z-index: -1;
+.nav-links a::after {
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #00c4b4);
+    animation: none;
 }
 
-.btn:hover::before {
-    left: 0;
+.nav-links a:hover::after {
+    animation: wavyUnderline 0.5s ease-in-out forwards;
 }
 
-.btn:hover {
+@keyframes wavyUnderline {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 100%; left: 0; }
+}
+
+/* ==== Glow Hover Button === */
+.btn-glow {
+    background-color: #0d1117;
+    border: 1px solid #007bff;
+    color: #00c4b4;
+    box-shadow: 0 0 5px #00c4b4;
+    transition: 0.3s ease;
+}
+
+.btn-glow:hover {
     color: #fff;
+    background-color: #007bff;
+    box-shadow: 0 0 10px #00c4b4, 0 0 20px #007bff;
 }
 
-/* About Image Zoom */
-.about-content img {
-    transition: transform 0.3s ease-in-out;
+/* ==== Cool Section Fade Up Animation ==== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
 }
 
-.about-content img:hover {
-    transform: scale(1.05);
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Projects Hover Card */
-.project-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-card .btn:hover {
-    background: #007bff;
-    color: #fff;
-}
-
-/* UHV Toggle Animation */
-#uhv-paragraph {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-}
-
-#uhv-paragraph.show {
-    max-height: 1000px;
-    padding-top: 20px;
-}
-
-/* Contact Form Effects */
-#contact-form input,
-#contact-form textarea {
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-#contact-form button {
-    background: linear-gradient(120deg, #007bff, #00c4b4);
-    color: #fff;
-    border: none;
-    transition: background 0.3s ease-in-out;
-}
-
-#contact-form button:hover {
-    background: linear-gradient(120deg, #00c4b4, #007bff);
-}
-
-/* Footer Social Links */
+/* ==== Social Icons Glow on Hover ==== */
 .social-links a {
-    position: relative;
-    padding-bottom: 5px;
+    color: #fff;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-.social-links a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: #fff;
-    transition: width 0.3s ease-in-out;
-}
-
-.social-links a:hover::after {
-    width: 100%;
+.social-links a:hover {
+    color: #00c4b4;
+    text-shadow: 0 0 5px #00c4b4, 0 0 10px #007bff;
 }
