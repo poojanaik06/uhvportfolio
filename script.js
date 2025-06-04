@@ -1,5 +1,6 @@
 // === Preloader ===
 window.addEventListener('load', () => {
+  console.log("Page fully loaded, hiding preloader..."); // Debugging log
   const preloader = document.querySelector('.preloader');
   preloader.style.display = 'none'; // Hide the preloader after the page is fully loaded
 });
