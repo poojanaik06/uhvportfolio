@@ -145,12 +145,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  flex-direction: row; /* row for desktop */
-  animation: fade-in 1s ease forwards;
-  opacity: 0;
-  flex-wrap: wrap; /* wrap ensures proper alignment on small windows */
+  flex-direction: row; 
+  flex-wrap: wrap; 
 }
-
 .about-text {
   max-width: 600px;
   text-align: left;
