@@ -431,51 +431,23 @@ img {
 }
 
 /* Skills Section */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
+/* Add this for fade-in animation */
 .skill-category {
   background: rgba(30, 41, 59, 0.5);
   padding: 2rem;
   border-radius: 1rem;
-  transition: var(--transition);
+  transition: var(--transition), opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+/* This class is added via JS when in view */
+.skill-category.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.skill-bar {
-  margin-bottom: 1.5rem;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.skill-name {
-  font-weight: 500;
-}
-
-.skill-percent {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.progress-container {
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
+/* Skill level progress bar reveal animation */
 .skill-level {
   height: 100%;
   border-radius: 4px;
@@ -483,6 +455,12 @@ img {
   width: 0;
   transition: width 1s ease-out;
 }
+
+/* Trigger width animation when visible */
+.skill-category.visible .skill-level {
+  width: inherit; /* will use the inline style width like style="width: 90%;" */
+}
+
 /* ===== PROJECTS SECTION ===== */
 .project-grid {
   display: grid;
