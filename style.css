@@ -431,69 +431,48 @@ img {
 }
 
 /* ===== SKILLS SECTION ===== */
+/* Container layout */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.skill-category {
-  background: white;
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.skill-category h3 {
-  margin-bottom: 1.5rem;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--dark);
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
+/* Each skill block */
+.skill-category {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 300px;
+}
+
+/* Skill titles */
+.skill-category h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #1a1a1a;
+}
+
+/* Skill bar structure */
 .skill-bar {
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .skill-name {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
   font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
 }
 
 .skill-level {
-  height: 10px;
-  background: #e2e8f0;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #00bfff;
+  background-clip: padding-box;
 }
 
-.skill-level::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: linear-gradient(to right, var(--primary), var(--secondary));
-  width: 0;
-  border-radius: 5px;
-  animation: fillBar 1.5s ease-out forwards;
-}
-
-@keyframes fillBar {
-  to { width: attr(data-level); }
-}
 
 /* ===== PROJECTS SECTION ===== */
 .project-grid {
