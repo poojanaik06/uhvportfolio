@@ -34,7 +34,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+const skills = document.querySelectorAll('.skill-category');
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // only animate once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  skills.forEach(skill => observer.observe(skill));
 // UHV Toggle
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('uhv-toggle');
