@@ -1,3 +1,10 @@
+```
+// === Preloader ===
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  preloader.style.display = 'none';
+});
+
 // === Hamburger Menu Toggle ===
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -44,13 +51,5 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
-
-        // Simulate backend submission
-        console.log('Form Submitted:', data);
-        alert('Thank you for your message! I will get back to you soon.');
-
-        contactForm.reset();
-    });
-}
+        const formData = new FormData(contact
+```
