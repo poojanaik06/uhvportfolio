@@ -1,299 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pooja Naik - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Pooja J Naik — Computer Science student and web developer.">
+  <title>Pooja J Naik | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="loader"></div>
-  </div>
+  <div class="preloader" aria-hidden="true"><span></span></div>
+  <div class="noise" aria-hidden="true"></div>
 
-  <!-- Floating Particles -->
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-
-  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">Portfolio</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#uhv">UHV</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span></span><span></span><span></span>
+    <a class="brand" href="#home" aria-label="Pooja Naik home">Pooja <span>Naik</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#projects">Projects</a>
+      <a class="nav-resume" href="Pooja_Naik_Resume_2026.pdf" download>Resume <i class="fa-solid fa-arrow-down"></i></a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="animate">Hi, I'm <span>Pooja Naik</span></h1>
-      <p class="animate">Web Developer | Programmer | Problem Solver</p>
-      <div class="hero-btns animate">
-        <a href="#projects" class="btn btn-glow">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+  <main>
+    <section id="home" class="hero poster-hero">
+      <div class="hero-grid"></div>
+      <p class="poster-title" aria-hidden="true">POOJA<br><span>NAIK</span></p>
+      <div class="hero-copy reveal">
+       
+        <h1>Designing ideas<br>into <em>impact.</em></h1>
+        <p class="hero-intro">Hi, I’m <strong>Pooja J Naik</strong> — a Computer Science student and web developer who enjoys turning thoughtful ideas into clean, useful digital experiences.</p>
+        <p class="hero-punchline">Build boldly. Learn deeply. Ship beautifully.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <i class="fa-solid fa-arrow-down"></i></a><a class="text-link" href="#contact">Let’s connect <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
       </div>
-    </div>
-    <div class="scroll-down">
-      <span></span>
-    </div>
-  </section>
+      <div class="hero-portrait" aria-label="Portrait of Pooja Naik">
+        <div class="portrait-disc"></div><div class="portrait-halo"></div>
+        <div class="portrait-crop"><img src="pooja-portfolio-cutout.png" alt="Pooja Naik smiling in a blue shirt" fetchpriority="high"></div>
+        <div class="tech-float tech-react"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></div>
+        <div class="tech-float tech-js">JS</div>
+        <div class="tech-float tech-python"><i class="fa-brands fa-python"></i></div>
+        <div class="tech-float tech-node">C++</div>
+        <div class="tech-float tech-code"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
+        <div class="tech-float tech-canva"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"></div>
+      </div>
+      <p class="hero-side">POOJA NAIK · WEB DEVELOPER</p>
+      <a class="scroll-cue" href="#about">SCROLL TO DISCOVER <i class="fa-solid fa-arrow-down"></i></a>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="section-block">
-    <h2 class="section-title animate">About Me</h2>
-    <div class="about-content">
-      <div class="profile-image animate">
-        <img src="me.jpeg" alt="Profile Picture" />
-      </div>
-      <div class="about-text animate">
-        <p>I'm a passionate web developer and programmer specializing in C/C++. With a strong foundation in problem-solving, I thrive on tackling complex challenges through logical thinking and creative approaches.</p>
-        <p>My journey in technology began during my college years where I discovered my love for coding. Since then, I've been continuously expanding my skillset and staying updated with the latest industry trends.</p>
-        <div class="personal-info">
-          <div><i class="fas fa-user"></i> <span>Pooja Jagannath Naik</span></div>
-          <div><i class="fas fa-envelope"></i> <span>nkpooja266@gmail.com</span></div>
-          <div><i class="fas fa-map-marker-alt"></i> <span>Mangaluru, India</span></div>
-          <div><i class="fas fa-graduation-cap"></i> <span>Bachelor of Engineering in Computer Science</span></div>
-        </div>
-        <a href="poojaresume.docx" class="btn btn-glow" download="Pooja_Naik_Resume.pdf">Download Resume</a>
-      </div>
-    </div>
-  </section>
-
-<!-- Skills Section -->
-<section id="skills" class="section-block">
-  <h2 class="section-title">My Skills</h2>
-  <div class="skills-container">
-
-    <!-- Programming -->
-    <div class="skill-category">
-      <h3><i class="fas fa-code"></i> Programming</h3>
-      <div class="skill-bar">
-        <div class="skill-name">C/C++</div>
-        <div class="skill-level" style="width: 90%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">JavaScript</div>
-        <div class="skill-level" style="width: 85%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">Python</div>
-        <div class="skill-level" style="width: 55%;"></div>
-      </div>
-    </div>
-
-    <!-- Web Development -->
-    <div class="skill-category">
-      <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
-      <div class="skill-bar">
-        <div class="skill-name">HTML/CSS</div>
-        <div class="skill-level" style="width: 95%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">React</div>
-        <div class="skill-level" style="width: 50%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">Node.js</div>
-        <div class="skill-level" style="width: 65%;"></div>
-      </div>
-    </div>
-
-    <!-- Tools & Technologies -->
-    <div class="skill-category">
-      <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-      <div class="skill-bar">
-        <div class="skill-name">Git</div>
-        <div class="skill-level" style="width: 85%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">SQL</div>
-        <div class="skill-level" style="width: 70%;"></div>
-      </div>
-      <div class="skill-bar">
-        <div class="skill-name">Bubble</div>
-        <div class="skill-level" style="width: 90%;"></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- Projects Section -->
-  <section id="projects" class="section-block">
-    <h2 class="section-title animate">My Projects</h2>
-    <div class="project-grid">
-      <div class="project-card animate">
-        <div class="project-image">
-          <img src="medbot.jpeg" alt="Medbot" />
-        </div>
-        <div class="project-content">
-          <h3>Medbot</h3>
-          <p>AI-powered healthcare assistant providing personalized medical advice and symptom analysis with a user-friendly interface.</p>
-          <div class="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-          </div>
-          <a href="https://med-bot-xi.vercel.app/" class="btn" target="_blank">View Project</a>
+    <section id="about" class="section about">
+   
+      <div class="about-layout">
+        <h2 class="display-title reveal">Curious by nature.<br><em>Built for the web.</em></h2>
+        <div class="about-copy reveal">
+          <p>I’m pursuing a B.E. in Computer Science at Sahyadri College of Engineering & Management, with a 8.97 CGPA. I care about clear interfaces, reliable software, and learning quickly in real-world teams.</p>
+          <p>Successfully completed a Web Development & Testing Internship at Torsecure Cyber LLP, contributing to the development of responsive React interfaces and ensuring the quality, reliability and performance of production-ready applications.</p>
+          <div class="quick-facts"><div><strong>2023—2027</strong><span>B.E. Computer Science</span></div><div><strong>Mangaluru</strong><span>Karnataka, India</span></div></div>
+          <a class="button button-dark" href="Pooja_Naik_Resume_2026.pdf" download>Download resume <i class="fa-solid fa-arrow-down"></i></a>
         </div>
       </div>
-      
-      <div class="project-card animate">
-        <div class="project-image">
-          <img src="swift.jpeg" alt="SwiftServe" />
-        </div>
-        <div class="project-content">
-          <h3>SwiftServe</h3>
-          <p>Restaurant management platform with real-time menu updates and seamless customer ordering experience.</p>
-          <div class="project-tech">
-            <span>Node.js</span>
-          </div>
-          <a href="https://assignment-swiftserve.vercel.app/" class="btn" target="_blank">View Project</a>
-        </div>
-      </div>
-      
-      <div class="project-card animate">
-        <div class="project-image">
-          <img src="cake.jpeg" alt="Sweet Delights" />
-        </div>
-        <div class="project-content">
-          <h3>Sweet Delights</h3>
-          <p>E-commerce platform for a boutique bakery showcasing delicious cakes with an intuitive shopping experience.</p>
-          <div class="project-tech">
-            <span>HTML/CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://assignment-2-phi-lilac.vercel.app/" class="btn" target="_blank">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-    <!-- UHV Section -->
-  <section id="uhv" class="section-block">
-    <div class="container">
-      <h2 class="section-title animate">Universal Human Values</h2>
-      <div class="uhv-container">
-          <div id="uhv-content" class="hidden" aria-hidden="true">
-          <div class="uhv-content-inner animate">
-            <h3>Basis for Humanistic Education</h3>
-            <p>In recent times, I've been reflecting heavily upon the way education systems nowadays have slowly moved their emphasis on measurable outcomes—grades, test scores, certifications, and placements. These are clearly significant things, but I've realized how frequently we forget a simple reality: students are not simply brains to be filled up with knowledge, but entire human beings with emotions, hopes, conundrums, and personal viewpoints. In our haste to attain academic and career achievements, we lose sight of the very essence of education to cultivate the human spirit.</p>
-            
-            <p>It is here that the humanistic education theme becomes so precious to me. It plants its eyes on the worth of every learner as a one-of-a-kind human being, not merely a number in a machine or a container for technical competencies. It promotes learning environments that are more respectful, empathetic, and emotionally centered. Humanistic education to me is providing a space for the students to find out who they are—to know their values, strengths, limitations, and driving force. It's teaching students to be not only knowledgeable experts but also thoughtful and reflective human beings.</p>
-            
-            <p>I am most inspired by this method because it has the potential to make a deeper connection between student and teacher. Learning is not merely a one-way exchange in a humanistic classroom. Teachers are not mere authority figures, but mentors, facilitators, and even learners themselves. Teachers empower students to ask big questions, to take intellectual risks, and to try out their own ideas with confidence and curiosity. Subject matter is brought to life, not skills to be mastered, but tools to master seeing and comprehending the world and our place in it.</p>
-            
-            <p>In today's fast-paced, rapidly changing world, I think humanistic education has never been more important. It does more than ready students for a job; it gets them ready for life. It cultivates the kind of thinking that values diversity, provokes creativity, and builds resilience. It causes us to listen more, work together more, and be more civic, not so much about winning, but about meaning. At its core, humanistic education reminds us that learning isn't about doing—it's about changing. And in that changing, we encounter not merely knowledge, but meaning.</p>
-            
-            <p>Secondly, humanistic education builds a very solid sense of community throughout the process of learning. It shows students that learning is something that is not done in isolation but as a collective experience based on respect and cooperation. When classrooms are welcoming and inclusive, students learn the importance of collective development over competitive individuality. They learn that their voice matters and listening to others—particularly others with different experiences and backgrounds—is an affirmative act of learning. This not only builds interpersonal resilience but also creates a culture of togetherness, empathy, and civic responsibility that spreads well beyond the classroom.</p>
-            
-            <p>Alongside formative effects on individual students, humanistic education can transform cultures of learning. As applied by schools, they transition from rigid hierarchies and mechanistic routines to adaptive, student-focused ecosystems. These become more agile, innovative, and attuned to actual student needs. They affirm diversity in all its manifestations—intellectual, emotional, cultural—and recognize that an education-by-numbers strategy is restrictive and unfair. In doing this, they are environments where all students can excel, not only those who meet the traditional view of academic achievement.</p>
-            
-            <p>No less crucial is the exercise of student agency in a humanist classroom. When learners are allowed to manage their own learning—whether through project learning, open discussion, or independent research—they start taking charge of their own learning. They are more motivated, engaged, and self-assured. Autonomy develops critical thinking abilities and problem-solving capacities that are in such high demand out there in the real world. More fundamentally, it teaches students that they are not passive consumers of facts, but productive creators of their own destinies. That is an attitude shift that can be transformational.</p>
-            
-            <p>Moving forward, I think the education of the future needs to be based on humanistic principles if we are to respond adequately to the complexities of the 21st century. Since we are confronted with world challenges—climate change, automation, disparity, and mental health crises—our education must not only prepare capable professionals but conscious citizens. We need educational systems that also develop wisdom, compassion, and courage in addition to intellect. By committing to humanistic education, we are taking a courageous move towards imagining education not as readying for work, but for a life of purpose, connection, and meaning. It's not just about building careers—it's about building mankind.</p>
-          </div>
+    <section id="skills" class="section skills">
+      <div class="toolkit-heading"><p class="section-kicker">TOOLKIT</p><h2>My <em>Toolkit</em></h2><p>Design it with intent. Build it with care. Make it work beautifully.</p></div>
+      <div class="skill-marquee" aria-label="Moving technology logos">
+        <div class="skill-track">
+          <span><i class="fa-brands fa-html5"></i> HTML5</span><span><i class="fa-brands fa-css3-alt"></i> CSS3</span><span><i class="fa-brands fa-js"></i> JavaScript</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""> React</span><span><i class="fa-brands fa-node-js"></i> Node.js</span><span><i class="fa-brands fa-python"></i> Python</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt=""> Canva</span><span><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span aria-hidden="true"><i class="fa-brands fa-html5"></i> HTML5</span><span aria-hidden="true"><i class="fa-brands fa-css3-alt"></i> CSS3</span><span aria-hidden="true"><i class="fa-brands fa-js"></i> JavaScript</span><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt=""> React</span><span aria-hidden="true"><i class="fa-brands fa-node-js"></i> Node.js</span><span aria-hidden="true"><i class="fa-brands fa-python"></i> Python</span><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt=""> Linux</span><span aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt=""> Canva</span><span aria-hidden="true"><i class="fa-brands fa-git-alt"></i> Git</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section-block">
-    <h2 class="section-title animate">Contact Me</h2>
-    <div class="contact-container">
-      <div class="contact-info animate">
-        <h3>Get in Touch</h3>
-        <p>I'm currently available for freelance work and full-time positions. Feel free to reach out to discuss opportunities or just say hello!</p>
-        
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p>nkpooja266@gmail.com</p>
+    <section id="journey" class="section journey">
+    
+      <div class="journey-grid"><h2 class="display-title reveal">Learning in the<br><em>real world.</em></h2><div class="timeline reveal"><article><div class="timeline-top"><span>JUN 2026 — JUL 2026 </span></div><h3>Web Development & Testing Intern</h3><p class="company">Torsecure Cyber LLP</p><p>Testing production applications across functional, UI, and regression flows, while building responsive React UI components for Repoflo in a Git-based team workflow.</p></article><article><div class="timeline-top"><span>ACHIEVEMENT</span></div><h3>NxtWave Buildathon</h3><p class="company">State-level round · Bengaluru</p><p>Selected among 176 teams for the submitted project idea, qualifying for the state-level round.</p></article></div></div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-head"><div class="section-kicker">04 / PROJECTS</div><h2 class="display-title">The next idea<br>could be <em>yours.</em></h2></div>
+      <p class="project-note">A selection of recent builds, from polished interfaces to projects currently taking shape.</p>
+      <div class="project-showcase" aria-label="Scrollable project showcase">
+        <div class="project-rail">
+          <a class="project-card project-card-link reveal" href="https://med-bot-xi.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the MedBot project">
+            <div class="project-media"><img src="medbot.jpeg" alt="MedBot healthcare chatbot preview"></div>
+            <div class="project-info">
+              <span>MEDBOT</span>
+              <h3>Healthcare chatbot</h3>
+              <p>A friendly healthcare chatbot that collects symptoms and offers clear, general guidance through an easy conversation flow.</p>
+              <span class="project-link-label">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
             </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <h4>Phone</h4>
-              <p>+91 70198 11094</p>
+          </a>
+          <a class="project-card project-card-link reveal" href="https://assignment-swiftserve.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the SwiftServe project">
+            <div class="project-media"><img src="swift.jpeg" alt="SwiftServe restaurant platform preview"></div>
+            <div class="project-info">
+              <span>SWIFTSERVE</span>
+              <h3>Restaurant management platform</h3>
+              <p>A responsive restaurant site for browsing dishes, viewing menu details, and placing an order through a simple, focused flow.</p>
+              <span class="project-link-label">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
             </div>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Location</h4>
-              <p>Mangaluru, Karnataka, India</p>
+          </a>
+          <a class="project-card project-card-link reveal" href="https://assignment-2-phi-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Sweet Delights project">
+            <div class="project-media"><img src="cake.jpeg" alt="Sweet Delights bakery website preview"></div>
+            <div class="project-info">
+              <span>SWEET DELIGHTS</span>
+              <h3>Boutique bakery experience</h3>
+              <p>A cheerful bakery storefront that makes it easy to explore cakes, discover favourites, and move towards an order.</p>
+              <span class="project-link-label">View project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
             </div>
-          </div>
+          </a>
+          <article class="project-card project-card-rewind reveal">
+            <div class="project-media"><img src="rewind-project.png" alt="Illustration of a website under construction"></div>
+            <div class="project-info">
+              <span>REWIND</span>
+              <h3>A project in progress</h3>
+              <p>An upcoming web experience centred on thoughtful interactions, a clear user journey, and a polished visual identity.</p>
+              <p class="project-tags">In progress </p>
+            </div>
+          </article>
         </div>
-        
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/pooja-naik-946971284" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/poojanaik06/" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
       </div>
-      
-      <div class="contact-form animate">
-        <form id="contact-form">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required />
-          </div>
-          <div class="form-group">
-            <input type="text" name="subject" placeholder="Subject" required />
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-glow">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+      <div class="project-scrollbar" aria-hidden="true"><span></span></div>
+      <p class="project-scroll-help"><i class="fa-solid fa-arrow-left"></i> Drag or scroll to explore <i class="fa-solid fa-arrow-right"></i></p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">Portfolio</div>
-      <p>Creating meaningful solutions through technology</p>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <section id="contact" class="contact">
+      <h2>Have an idea?<br><em>Let’s make it real.</em></h2>
+      <div class="contact-links">
+        <a class="contact-email" href="mailto:nkpooja266@gmail.com"><i class="fa-solid fa-envelope"></i><span>Email me</span> nkpooja266@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a href="https://www.linkedin.com/in/pooja-naik-946971284" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a href="https://github.com/poojanaik06" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
-      <div class="copyright">
-        &copy; 2025 Pooja Jagannath Naik. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
-
+      <div class="contact-bottom"><span>Mangaluru, Karnataka, India</span><span>Open to opportunities &amp; collaborations</span><span>© <span id="year"></span> Pooja Naik</span></div>
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
